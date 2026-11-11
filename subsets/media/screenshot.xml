@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Game media: screenshot, falls back to box art, then NO SIGNAL -->
+<!-- Preview style: screenshot, falls back to box art, then NO SIGNAL -->
 <theme>
   <formatVersion>7</formatVersion>
   <view name="detailed">

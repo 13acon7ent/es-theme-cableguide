@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Preview style: box back, falls back to box front, then NO SIGNAL -->
+<theme>
+  <formatVersion>7</formatVersion>
+  <view name="detailed">
+    <image name="cgBoxArt">
+      <path>exists({game:boxback}) ? {game:boxback} : {game:thumbnail}</path>
+      <default>./../../art/nosignal.png</default>
+      <visible>true</visible>
+    </image>
+  </view>
+</theme>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Game media: video, shows box art while loading or when there's no video, then NO SIGNAL -->
+<!-- Preview style: video, shows box art while loading or when there's no video, then NO SIGNAL -->
 <theme>
   <formatVersion>7</formatVersion>
   <view name="detailed">

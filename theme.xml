@@ -887,15 +887,20 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
   </view>
 
   <!-- ============================================================
-       THEME OPTIONS (User Interface Settings > Theme Configuration)
+       THEME OPTIONS
+       Global: User Interface Settings > Theme Configuration.
+       Per system (appliesTo="detailed"): in a game list, View Options > View Customization.
        The first option in each subset is the default.
        Must stay after the base views: later definitions override earlier ones.
        ============================================================ -->
-  <subset name="gamemedia" displayName="Game media">
+  <subset name="gamemedia" displayName="Preview style" appliesTo="detailed">
     <include name="screenshot" displayName="Screenshot">./subsets/media/screenshot.xml</include>
     <include name="boxart" displayName="Box art">./subsets/media/boxart.xml</include>
     <include name="video" displayName="Video">./subsets/media/video.xml</include>
+    <include name="mix" displayName="Mix image">./subsets/media/mix.xml</include>
     <include name="titleshot" displayName="Title screen">./subsets/media/titleshot.xml</include>
     <include name="fanart" displayName="Fan art">./subsets/media/fanart.xml</include>
+    <include name="logo" displayName="Logo">./subsets/media/logo.xml</include>
+    <include name="boxback" displayName="Box back">./subsets/media/boxback.xml</include>
   </subset>
 </theme>
