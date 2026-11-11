@@ -1,0 +1,27 @@
+es-theme-cableguide
+Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International License (CC BY-NC-SA 4.0).
+
+You are free to:
+  - Share: copy and redistribute the material in any medium or format
+  - Adapt: remix, transform, and build upon the material
+
+Under the following terms:
+  - Attribution: give appropriate credit, provide a link to the license, and
+    indicate if changes were made.
+  - NonCommercial: you may not use the material for commercial purposes.
+  - ShareAlike: if you remix, transform, or build upon the material, you must
+    distribute your contributions under the same license as the original.
+
+Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+Third-party material included in this theme:
+
+  art/background/*.jpg
+    System photos from es-theme-carbon (https://github.com/fabricecaruso/es-theme-carbon)
+    by Fabrice Caruso, based on "Carbon" by Eric Hettervik (Rookervik) and
+    "simple" by Nils Bonenberger. Licensed CC-BY-NC-SA. Resized to 960x540.
+
+  fonts/RobotoCondensed-Bold.ttf, fonts/RobotoCondensed-Medium.ttf
+    Roboto Condensed, SIL Open Font License 1.1 (see fonts/OFL.txt).
+    Static weights instanced from the variable font.
