@@ -6,7 +6,7 @@ A 2010-era cable TV listings look for Batocera (built for v44, 1920×1080 / 16:9
 
 - **System view:** systems are listed as "channels" (system code | full name | manufacturer). The top-left panel shows system info and the right panel shows a photo of the system (or a generated channel card if there's no photo).
 - **Gamelist view (detailed):** the header shows the system's logo (or its name if there's no logo), and games are listed as "channels" (release year / system code | title | genre). The top-left panel shows the selected game's details and the right panel shows its box art.
-- **Genre colors:** a game's cells turn green when its genre is exactly `Sports` and purple when it's exactly `Platform`. Everything else is navy.
+- **Genre colors:** a game's cells turn green when its genre contains "sports" anywhere (any case, e.g. `Sports`, `Sports / Fishing`, `Racing, Sports`) and purple when it's exactly `Platform`. Everything else is navy.
 - **Menus:** restyled to match the guide (blue window, pale-yellow selection).
 
 ## Screenshots

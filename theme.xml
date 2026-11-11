@@ -26,7 +26,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <cgChannelGap>05070C</cgChannelGap> <!-- black lines between channel cells -->
     <cgCellGap>959DA8</cgCellGap>       <!-- gray lines between program cells -->
     <cgCell>1A3665</cgCell>             <!-- default (navy) game cells -->
-    <cgSports>0F703A</cgSports>         <!-- genre exactly "Sports" -->
+    <cgSports>0F703A</cgSports>         <!-- genre contains "sports" -->
     <cgPlatform>582D86</cgPlatform>     <!-- genre exactly "Platform" -->
     <cgHighlight>FDF3AC</cgHighlight>   <!-- selected row -->
     <cgMedia>05070C</cgMedia>           <!-- box art / system art panel -->
@@ -39,9 +39,9 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <cgDarkText>030F1D</cgDarkText>
     <cgShadow>000000B0</cgShadow>
 
-    <!-- genre matching (exact, case-sensitive) -->
-    <cgSportsGenre>Sports</cgSportsGenre>
-    <cgPlatformGenre>Platform</cgPlatformGenre>
+    <!-- genre matching -->
+    <cgSportsGenre>sports</cgSportsGenre>        <!-- green if the genre CONTAINS this (any case) -->
+    <cgPlatformGenre>Platform</cgPlatformGenre>  <!-- purple if the genre is EXACTLY this -->
 
     <!-- menu -->
     <cgMenuText>FFFFFF</cgMenuText>
@@ -222,13 +222,13 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- Gap colors behind the grid: black under channel column, gray under program cells -->
     <image name="cgGridGapChan" extra="true">
       <path>./art/white.png</path>
-      <pos>0 0.5806</pos><size>0.1354 0.3426</size>
+      <pos>0 0.5806</pos><size>0.1354 0.3666</size>
       <color>${cgChannelGap}</color>
       <zIndex>3</zIndex>
     </image>
     <image name="cgGridGapCells" extra="true">
       <path>./art/white.png</path>
-      <pos>0.1354 0.5806</pos><size>0.8646 0.3426</size>
+      <pos>0.1354 0.5806</pos><size>0.8646 0.3666</size>
       <color>${cgCellGap}</color>
       <zIndex>3</zIndex>
     </image>
@@ -236,18 +236,18 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- Bottom help banner, full width -->
     <image name="cgBannerBorder" extra="true">
       <path>./art/white.png</path>
-      <pos>0 0.9232</pos><size>1 0.0768</size>
+      <pos>0 0.9472</pos><size>1 0.0528</size>
       <color>${cgBannerBorder}</color>
       <zIndex>3</zIndex>
     </image>
     <image name="cgBannerFill" extra="true">
       <path>./art/white.png</path>
-      <pos>0 0.926</pos><size>1 0.074</size>
+      <pos>0 0.95</pos><size>1 0.05</size>
       <color>${cgBanner}</color>
       <zIndex>4</zIndex>
     </image>
     <helpsystem name="help">
-      <pos>0.0208 0.963</pos>
+      <pos>0.0208 0.975</pos>
       <origin>0 0.5</origin>
       <textColor>${cgBannerText}FF</textColor>
       <iconColor>${cgBannerText}FF</iconColor>
@@ -429,7 +429,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
 
     <textlist name="textlist">
       <pos>0 0.5806</pos>
-      <size>1 0.3426</size>
+      <size>1 0.3666</size>
       <lines>5</lines>
       <selectorColor>00000000</selectorColor>
       <primaryColor>00000000</primaryColor>
@@ -698,11 +698,11 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </text>
 
     <!-- The channel grid: one row per game.
-         Title and Genre cells are navy, or green when genre is exactly "Sports",
-         or purple when genre is exactly "Platform". Selected title cell turns yellow. -->
+         Title and Genre cells are navy, green when the genre contains "sports" (any case),
+         or purple when the genre is exactly "Platform". Selected title cell turns yellow. -->
     <textlist name="gamelist">
       <pos>0 0.5806</pos>
-      <size>1 0.3426</size>
+      <size>1 0.3666</size>
       <lines>5</lines>
       <selectorColor>00000000</selectorColor>
       <primaryColor>00000000</primaryColor>
@@ -754,7 +754,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
             <path>${themePath}/art/white.png</path>
             <pos>0.1375 0</pos><size>0.6161 0.93</size>
             <color>${cgSports}</color>
-            <visible>{game:genre} == '${cgSportsGenre}'</visible>
+            <visible>contains(lower({game:genre}), '${cgSportsGenre}')</visible>
           </image>
           <image name="titlePlatform">
             <path>${themePath}/art/white.png</path>
@@ -804,7 +804,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
             <path>${themePath}/art/white.png</path>
             <pos>0.7578 0</pos><size>0.2422 0.93</size>
             <color>${cgSports}</color>
-            <visible>{game:genre} == '${cgSportsGenre}'</visible>
+            <visible>contains(lower({game:genre}), '${cgSportsGenre}')</visible>
           </image>
           <image name="sidePlatform">
             <path>${themePath}/art/white.png</path>
