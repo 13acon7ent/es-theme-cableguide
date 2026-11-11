@@ -624,6 +624,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <lineSpacing>1.15</lineSpacing>
       <autoScroll>vertical</autoScroll>
       <autoScrollDelay>4000</autoScrollDelay>
+      <autoScrollSpeed>120</autoScrollSpeed>  <!-- ms per pixel; default 150 -->
       <color>${cgText}</color>
       <glowColor>${cgShadow}</glowColor><glowSize>1</glowSize><glowOffset>2 2</glowOffset>
       <zIndex>40</zIndex>
