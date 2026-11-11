@@ -9,6 +9,14 @@ A 2010-era cable TV listings look for Batocera (built for v44, 1920×1080 / 16:9
 - **Genre colors:** a game's cells turn green when its genre is exactly `Sports` and purple when it's exactly `Platform`. Everything else is navy.
 - **Menus:** restyled to match the guide (blue window, pale-yellow selection).
 
+## Screenshots
+
+| System view | Game list |
+|---|---|
+| ![System view](screenshots/system.png) | ![Game list](screenshots/gamelist.png) |
+
+![Menu](screenshots/menu.png)
+
 ## Install
 
 1. Copy the `es-theme-cableguide` folder to `/userdata/themes/` (over the network share it's `\\BATOCERA\share\themes\`).
