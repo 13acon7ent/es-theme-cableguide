@@ -121,6 +121,10 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <menuGrid name="menugrid">
       <separatorColor>${cgMenuSoft}20</separatorColor>
     </menuGrid>
+    <menuTextEdit name="menutextedit">
+      <inactive>./art/textinput.png</inactive>
+      <active>./art/textinput_active.png</active>
+    </menuTextEdit>
     <menuButton name="menubutton">
       <path>./art/menu_button.png</path>
       <filledPath>./art/menu_button_filled.png</filledPath>
@@ -209,6 +213,12 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <color>${cgChannelGap}</color>
       <zIndex>4</zIndex>
     </image>
+    <image name="cgBarRuleBottom" extra="true">
+      <path>./art/white.png</path>
+      <pos>0 0.5769</pos><size>1 0.0037</size>
+      <color>${cgChannelGap}</color>
+      <zIndex>4</zIndex>
+    </image>
     <image name="cgBarRuleCol1" extra="true">
       <path>./art/white.png</path>
       <pos>0.1354 0.533</pos><size>0.0016 0.033</size>
@@ -217,7 +227,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </image>
     <image name="cgBarRuleCol2" extra="true">
       <path>./art/white.png</path>
-      <pos>0.7557 0.533</pos><size>0.0016 0.033</size>
+      <pos>0.7552 0.533</pos><size>0.0016 0.033</size>
       <color>${cgLine}</color>
       <zIndex>4</zIndex>
     </image>
@@ -448,12 +458,12 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
           <pos>0 0</pos><size>1 1</size>
           <image name="chanCell">
             <path>${themePath}/art/white.png</path>
-            <pos>0 0</pos><size>0.1333 0.93</size>
+            <pos>0 0</pos><size>0.1333 0.95</size>
             <color>${cgChannel}</color>
           </image>
           <text name="chanText">
             <text>{system:theme}</text>
-            <pos>0 0</pos><size>0.1333 0.93</size>
+            <pos>0 0</pos><size>0.1333 0.95</size>
             <alignment>center</alignment>
             <verticalAlignment>center</verticalAlignment>
             <forceUppercase>true</forceUppercase>
@@ -464,12 +474,12 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
           </text>
           <image name="titleCell">
             <path>${themePath}/art/white.png</path>
-            <pos>0.1375 0</pos><size>0.6161 0.93</size>
+            <pos>0.1354 0</pos><size>0.6193 0.95</size>
             <color>${cgCell}</color>
           </image>
           <image name="titleSel">
             <path>${themePath}/art/white.png</path>
-            <pos>0.1375 0</pos><size>0.6161 0.93</size>
+            <pos>0.1354 0</pos><size>0.6193 0.95</size>
             <color>${cgHighlight}00</color>
             <storyboard event="activate">
               <animation property="color" to="${cgHighlight}FF"/>
@@ -480,7 +490,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
           </image>
           <text name="titleText">
             <text>{system:fullName}</text>
-            <pos>0.1458 0</pos><size>0.6 0.93</size>
+            <pos>0.1458 0</pos><size>0.6 0.95</size>
             <verticalAlignment>center</verticalAlignment>
             <multiLine>false</multiLine>
             <fontPath>${themePath}/fonts/RobotoCondensed-Bold.ttf</fontPath>
@@ -500,12 +510,12 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
           </text>
           <image name="sideCell">
             <path>${themePath}/art/white.png</path>
-            <pos>0.7578 0</pos><size>0.2422 0.93</size>
+            <pos>0.7568 0</pos><size>0.2432 0.95</size>
             <color>${cgCell}</color>
           </image>
           <text name="sideText">
             <text>{system:manufacturer}</text>
-            <pos>0.7682 0</pos><size>0.225 0.93</size>
+            <pos>0.7672 0</pos><size>0.225 0.95</size>
             <verticalAlignment>center</verticalAlignment>
             <multiLine>false</multiLine>
             <fontPath>${themePath}/fonts/RobotoCondensed-Bold.ttf</fontPath>
@@ -723,7 +733,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
           <!-- channel cell: release year over system code -->
           <image name="chanCell">
             <path>${themePath}/art/white.png</path>
-            <pos>0 0</pos><size>0.1333 0.93</size>
+            <pos>0 0</pos><size>0.1333 0.95</size>
             <color>${cgChannel}</color>
           </image>
           <text name="chanTop">
@@ -750,24 +760,24 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
           <!-- title cell: navy base, genre color layers, yellow selection layer -->
           <image name="titleCell">
             <path>${themePath}/art/white.png</path>
-            <pos>0.1375 0</pos><size>0.6161 0.93</size>
+            <pos>0.1354 0</pos><size>0.6193 0.95</size>
             <color>${cgCell}</color>
           </image>
           <image name="titleSports">
             <path>${themePath}/art/white.png</path>
-            <pos>0.1375 0</pos><size>0.6161 0.93</size>
+            <pos>0.1354 0</pos><size>0.6193 0.95</size>
             <color>${cgSports}</color>
             <visible>contains(lower({game:genre}), '${cgSportsGenre}') || contains(lower({game:genre}), '${cgSportsGenre2}') || contains(lower({game:genre}), '${cgSportsGenre3}')</visible>
           </image>
           <image name="titlePlatform">
             <path>${themePath}/art/white.png</path>
-            <pos>0.1375 0</pos><size>0.6161 0.93</size>
+            <pos>0.1354 0</pos><size>0.6193 0.95</size>
             <color>${cgPlatform}</color>
             <visible>{game:genre} == '${cgPlatformGenre}'</visible>
           </image>
           <image name="titleSel">
             <path>${themePath}/art/white.png</path>
-            <pos>0.1375 0</pos><size>0.6161 0.93</size>
+            <pos>0.1354 0</pos><size>0.6193 0.95</size>
             <color>${cgHighlight}00</color>
             <storyboard event="activate">
               <animation property="color" to="${cgHighlight}FF"/>
@@ -778,7 +788,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
           </image>
           <text name="titleText">
             <text>{game:name}</text>
-            <pos>0.1458 0</pos><size>0.6 0.93</size>
+            <pos>0.1458 0</pos><size>0.6 0.95</size>
             <verticalAlignment>center</verticalAlignment>
             <multiLine>false</multiLine>
             <fontPath>${themePath}/fonts/RobotoCondensed-Bold.ttf</fontPath>
@@ -800,24 +810,24 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
           <!-- genre cell: same color rule as the title cell -->
           <image name="sideCell">
             <path>${themePath}/art/white.png</path>
-            <pos>0.7578 0</pos><size>0.2422 0.93</size>
+            <pos>0.7568 0</pos><size>0.2432 0.95</size>
             <color>${cgCell}</color>
           </image>
           <image name="sideSports">
             <path>${themePath}/art/white.png</path>
-            <pos>0.7578 0</pos><size>0.2422 0.93</size>
+            <pos>0.7568 0</pos><size>0.2432 0.95</size>
             <color>${cgSports}</color>
             <visible>contains(lower({game:genre}), '${cgSportsGenre}') || contains(lower({game:genre}), '${cgSportsGenre2}') || contains(lower({game:genre}), '${cgSportsGenre3}')</visible>
           </image>
           <image name="sidePlatform">
             <path>${themePath}/art/white.png</path>
-            <pos>0.7578 0</pos><size>0.2422 0.93</size>
+            <pos>0.7568 0</pos><size>0.2432 0.95</size>
             <color>${cgPlatform}</color>
             <visible>{game:genre} == '${cgPlatformGenre}'</visible>
           </image>
           <text name="sideText">
             <text>{game:genre}</text>
-            <pos>0.7682 0</pos><size>0.225 0.93</size>
+            <pos>0.7672 0</pos><size>0.225 0.95</size>
             <verticalAlignment>center</verticalAlignment>
             <multiLine>false</multiLine>
             <fontPath>${themePath}/fonts/RobotoCondensed-Bold.ttf</fontPath>
