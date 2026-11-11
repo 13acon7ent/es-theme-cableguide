@@ -59,6 +59,6 @@ CC BY-NC-SA 4.0: free to use, share and modify, with credit, not for commercial 
 
 ## Credits
 
-- System logos in `art/logos/` (white versions where available; large SVGs converted to PNG) and system photos in `art/background/` come from [es-theme-carbon](https://github.com/fabricecaruso/es-theme-carbon) by Fabrice Caruso (based on "Carbon" by Eric Hettervik and "simple" by Nils Bonenberger), licensed CC-BY-NC-SA. Resized for this theme. System logos are trademarks of their respective owners.
+- Controller icons in `art/controllers/`, system logos in `art/logos/` (white versions where available; large SVGs converted to PNG) and system photos in `art/background/` come from [es-theme-carbon](https://github.com/fabricecaruso/es-theme-carbon) by Fabrice Caruso (based on "Carbon" by Eric Hettervik and "simple" by Nils Bonenberger), licensed CC-BY-NC-SA. Resized for this theme. System logos are trademarks of their respective owners.
 - Batocera logo (`art/batocera_logo.svg`): from [batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation) (MIT license), recolored. The Batocera name and logo belong to the Batocera project.
 - Font: Roboto Condensed, SIL Open Font License 1.1 (`fonts/OFL.txt`).

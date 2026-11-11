@@ -6,7 +6,7 @@ A 2010-era cable TV listings look for Batocera EmulationStation.
 License: CC BY-NC-SA 4.0 (see LICENSE)
 
 Credits:
-- System photos (art/background/) and logos (art/logos/) from es-theme-carbon by Fabrice CARUSO,
+- System photos (art/background/), logos (art/logos/) and controller icons (art/controllers/) from es-theme-carbon by Fabrice CARUSO,
   based on "Carbon" by Eric Hettervik (Rookervik) and "simple" by Nils Bonenberger,
   licensed CC-BY-NC-SA. Resized for this theme.
 - Batocera logo (art/batocera_logo.svg) from batocera-emulationstation (MIT), recolored.
@@ -64,6 +64,20 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
        Shown only when "Show clock" is enabled in Batocera's UI settings.
        ============================================================ -->
   <view name="screen">
+    <!-- Connected controllers (gamepad / light gun / wheel icons from es-theme-carbon),
+         on the clock line to the left of the time. Icons light up on button presses. -->
+    <controllerActivity name="controllerActivity">
+      <pos>0.14 0.083</pos>
+      <size>0.2 0.034</size>
+      <horizontalAlignment>right</horizontalAlignment>
+      <itemSpacing>0.004</itemSpacing>
+      <color>FFFFFFD0</color>
+      <imagePath>./art/controllers/gamepad.svg</imagePath>
+      <gunPath>./art/controllers/gun.svg</gunPath>
+      <wheelPath>./art/controllers/wheel.svg</wheelPath>
+      <activityColor>${cgHighlight}FF</activityColor>
+      <hotkeyColor>FF8080FF</hotkeyColor>
+    </controllerActivity>
     <text name="clock">
       <pos>0.27 0.072</pos>
       <size>0.2 0.055</size>
