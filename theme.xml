@@ -28,6 +28,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <cgCell>1A3665</cgCell>             <!-- default (navy) game cells -->
     <cgSports>0F703A</cgSports>         <!-- genre contains sports / fishing / hunting -->
     <cgPlatform>582D86</cgPlatform>     <!-- genre exactly "Platform" -->
+    <cgAdventure>8BB1D6</cgAdventure>   <!-- genre contains "adventure" -->
     <cgHighlight>FDF3AC</cgHighlight>   <!-- selected row -->
     <cgMedia>05070C</cgMedia>           <!-- box art / system art panel -->
     <cgBanner>ECE8F7</cgBanner>         <!-- bottom help banner -->
@@ -45,6 +46,8 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <cgSportsGenre2>fishing</cgSportsGenre2>
     <cgSportsGenre3>hunting</cgSportsGenre3>
     <cgPlatformGenre>Platform</cgPlatformGenre>  <!-- purple if the genre is EXACTLY this -->
+    <cgAdventureGenre>adventure</cgAdventureGenre> <!-- light blue if the genre CONTAINS this (any case);
+                                                        green and purple win if a genre matches both -->
 
     <!-- menu -->
     <cgMenuText>FFFFFF</cgMenuText>
@@ -714,8 +717,9 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </text>
 
     <!-- The channel grid: one row per game.
-         Title and Genre cells are navy, green when the genre contains "sports", "fishing" or "hunting" (any case),
-         or purple when the genre is exactly "Platform". Selected title cell turns yellow. -->
+         Title and Genre cells are navy, light blue when the genre contains "adventure",
+         green when it contains "sports", "fishing" or "hunting" (any case),
+         or purple when it is exactly "Platform". Later layers win. Selected title cell turns yellow. -->
     <textlist name="gamelist">
       <pos>0 0.5806</pos>
       <size>1 0.3666</size>
@@ -766,6 +770,12 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
             <pos>0.1354 0</pos><size>0.6193 0.95</size>
             <color>${cgCell}</color>
           </image>
+          <image name="titleAdventure">
+            <path>${themePath}/art/white.png</path>
+            <pos>0.1354 0</pos><size>0.6193 0.95</size>
+            <color>${cgAdventure}</color>
+            <visible>contains(lower({game:genre}), '${cgAdventureGenre}')</visible>
+          </image>
           <image name="titleSports">
             <path>${themePath}/art/white.png</path>
             <pos>0.1354 0</pos><size>0.6193 0.95</size>
@@ -815,6 +825,12 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
             <path>${themePath}/art/white.png</path>
             <pos>0.7568 0</pos><size>0.2432 0.95</size>
             <color>${cgCell}</color>
+          </image>
+          <image name="sideAdventure">
+            <path>${themePath}/art/white.png</path>
+            <pos>0.7568 0</pos><size>0.2432 0.95</size>
+            <color>${cgAdventure}</color>
+            <visible>contains(lower({game:genre}), '${cgAdventureGenre}')</visible>
           </image>
           <image name="sideSports">
             <path>${themePath}/art/white.png</path>
