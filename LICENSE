@@ -23,6 +23,11 @@ Third-party material included in this theme:
     "simple" by Nils Bonenberger. Licensed CC-BY-NC-SA. Photos resized to 960x540; large logo SVGs
     rasterized to PNG. Logos are trademarks of their respective owners.
 
+  art/batocera_logo.svg
+    Batocera logo from batocera-emulationstation
+    (https://github.com/batocera-linux/batocera-emulationstation), MIT license.
+    Recolored and cropped. The Batocera name and logo belong to the Batocera project.
+
   fonts/RobotoCondensed-Bold.ttf, fonts/RobotoCondensed-Medium.ttf
     Roboto Condensed, SIL Open Font License 1.1 (see fonts/OFL.txt).
     Static weights instanced from the variable font.

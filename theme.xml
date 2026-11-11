@@ -9,6 +9,7 @@ Credits:
 - System photos (art/background/) and logos (art/logos/) from es-theme-carbon by Fabrice CARUSO,
   based on "Carbon" by Eric Hettervik (Rookervik) and "simple" by Nils Bonenberger,
   licensed CC-BY-NC-SA. Resized for this theme.
+- Batocera logo (art/batocera_logo.svg) from batocera-emulationstation (MIT), recolored.
 - Font: Roboto Condensed, SIL Open Font License 1.1 (fonts/OFL.txt).
 
 Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
@@ -167,15 +168,15 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <color>${cgLine}</color>
       <zIndex>4</zIndex>
     </image>
-    <text name="cgWordmark" extra="true">
-      <text>batocera</text>
-      <pos>0.0365 0</pos><size>0.2 0.1389</size>
-      <verticalAlignment>center</verticalAlignment>
-      <fontPath>${cgMedium}</fontPath>
-      <fontSize>0.07</fontSize>
-      <color>${cgWordmark}</color>
+    <!-- Batocera logo (official artwork from batocera-emulationstation, recolored silver) -->
+    <image name="cgWordmark" extra="true">
+      <path>./art/batocera_logo.svg</path>
+      <pos>0.0365 0.0694</pos>
+      <origin>0 0.5</origin>
+      <maxSize>0.2 0.125</maxSize>
+      <linearSmooth>true</linearSmooth>
       <zIndex>5</zIndex>
-    </text>
+    </image>
     <!-- "GUIDE" badge -->
     <image name="cgPill" extra="true">
       <path>./art/white.png</path>
@@ -307,8 +308,18 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <singleLineScroll>true</singleLineScroll>
       <zIndex>10</zIndex>
     </text>
+    <image name="cgSysLogo" extra="true">
+      <path>./art/logos/${system.theme}.png</path>
+      <path>./art/logos/${system.theme}.svg</path>
+      <pos>0.4792 0.185</pos>
+      <origin>1 0.5</origin>
+      <maxSize>0.13 0.06</maxSize>
+      <linearSmooth>true</linearSmooth>
+      <zIndex>10</zIndex>
+    </image>
     <text name="cgSysChannel" extra="true">
       <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
+      <visible>!(exists('${themePath}/art/logos/' + {system:theme} + '.svg') || exists('${themePath}/art/logos/' + {system:theme} + '.png'))</visible>
       <pos>0.30 0.155</pos><size>0.1792 0.06</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
@@ -541,7 +552,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- Header: system logo replaces the "batocera" wordmark.
          Batocera shows "logo" when one of its paths exists (the last existing path wins),
          otherwise it shows "logoText" with the system's full name. -->
-    <text name="cgWordmark"><visible>false</visible></text>
+    <image name="cgWordmark"><visible>false</visible></image>
     <image name="logo">
       <path>./art/logos/${system.theme}.png</path>
       <path>./art/logos/${system.theme}.svg</path>
@@ -602,18 +613,33 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <visible>true</visible>
       <zIndex>40</zIndex>
     </text>
-    <text name="cgChannel" extra="true">
-      <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
+    <!-- System code, with a lock badge to its left when the game is a favorite.
+         The stack lays out right-to-left, so the code stays right-aligned. -->
+    <stackpanel name="cgChannelStack" extra="true">
       <pos>0.30 0.155</pos><size>0.1792 0.06</size>
-      <alignment>right</alignment>
-      <verticalAlignment>center</verticalAlignment>
-      <forceUppercase>true</forceUppercase>
-      <fontPath>${cgBold}</fontPath>
-      <fontSize>0.04</fontSize>
-      <color>${cgText}</color>
-      <glowColor>${cgShadow}</glowColor><glowSize>1</glowSize><glowOffset>2 2</glowOffset>
+      <orientation>horizontal</orientation>
+      <reverse>true</reverse>
+      <separator>0.012</separator>
       <zIndex>10</zIndex>
-    </text>
+      <text name="cgChannel">
+        <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
+        <verticalAlignment>center</verticalAlignment>
+        <forceUppercase>true</forceUppercase>
+        <multiLine>false</multiLine>
+        <fontPath>${cgBold}</fontPath>
+        <fontSize>0.04</fontSize>
+        <color>${cgText}</color>
+        <glowColor>${cgShadow}</glowColor><glowSize>1</glowSize><glowOffset>2 2</glowOffset>
+      </text>
+      <image name="cgFavLock">
+        <path>./art/favorite_lock.svg</path>
+        <visible>{game:favorite}</visible>
+        <pos>0 0</pos>
+        <origin>0 0</origin>
+        <maxSize>1 0.78</maxSize>
+        <linearSmooth>true</linearSmooth>
+      </image>
+    </stackpanel>
     <datetime name="md_releasedate">
       <pos>0.0365 0.215</pos><size>0.05 0.05</size>
       <format>%Y</format>
