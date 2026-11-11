@@ -7,9 +7,9 @@
       <visible>false</visible>
     </image>
     <video name="md_video">
-      <pos>0.75 0.2593</pos>
+      <pos>0.775 0.2593</pos>
       <origin>0.5 0.5</origin>
-      <maxSize>0.46 0.48</maxSize>
+      <maxSize>0.45 0.5185</maxSize>
       <delay>1</delay>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
       <showSnapshotDelay>true</showSnapshotDelay>

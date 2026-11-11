@@ -6,7 +6,7 @@ A 2010-era cable TV listings look for Batocera (built for v44, 1920×1080 / 16:9
 
 - **System view:** systems are listed as "channels" (system code | full name | manufacturer). The top-left panel shows system info and the right panel shows a photo of the system (or a generated channel card if there's no photo).
 - **Favorites:** a lock badge appears next to the system code in the info panel.
-- **Gamelist view (detailed):** the header shows the system's logo (or its name if there's no logo), and games are listed as "channels" (release year / system code | title | genre). The top-left panel shows the selected game's details and the right panel shows its box art.
+- **Gamelist view (detailed):** the header shows the system's logo (or its name if there's no logo), and games are listed as "channels" (release year / system code | title | genre). The top-left panel shows the selected game's details and the right panel shows its screenshot (configurable, see Game media).
 - **Genre colors:** a game's cells turn green when its genre contains "sports", "fishing" or "hunting" anywhere (any case, e.g. `Sports`, `Fishing`, `Sports / Hunting`) purple when it's exactly `Platform`, and light blue when it contains "adventure". If a genre matches more than one, green or purple wins over light blue. Everything else is navy.
 - **Menus:** restyled to match the guide (blue window, pale-yellow selection).
 
@@ -31,13 +31,13 @@ Pick what the right panel shows in User Interface Settings → Theme Configurati
 
 | Option | Shows | Falls back to |
 |---|---|---|
-| Box art (default) | Box (`thumbnail`) | Screenshot, then NO SIGNAL |
+| Screenshot (default) | Screenshot (`image`) | Box art, then NO SIGNAL |
+| Box art | Box (`thumbnail`) | Screenshot, then NO SIGNAL |
 | Video | Video (`video`) | Box art, then NO SIGNAL |
-| Screenshot | Screenshot (`image`) | Box art, then NO SIGNAL |
 | Title screen | Title screen (`titleshot`) | Screenshot, then NO SIGNAL |
 | Fan art | Fan art (`fanart`) | Screenshot, then NO SIGNAL |
 
-Each option only shows media your scraper actually downloaded.
+Each option only shows media your scraper actually downloaded. Media is scaled to fill as much of the window as possible without cropping.
 
 ## Custom system images (optional)
 

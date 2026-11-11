@@ -65,7 +65,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
        ============================================================ -->
   <view name="screen">
     <text name="clock">
-      <pos>0.22 0.072</pos>
+      <pos>0.27 0.072</pos>
       <size>0.2 0.055</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
@@ -150,7 +150,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- Top-left info panel (gradient) + header bar -->
     <image name="cgPanelBg" extra="true">
       <path>./art/white.png</path>
-      <pos>0 0.1389</pos><size>0.5 0.3796</size>
+      <pos>0 0.1389</pos><size>0.55 0.3796</size>
       <color>${cgPanelTop}</color>
       <colorEnd>${cgPanelBottom}</colorEnd>
       <gradientType>vertical</gradientType>
@@ -158,13 +158,13 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </image>
     <image name="cgHeaderBg" extra="true">
       <path>./art/white.png</path>
-      <pos>0 0</pos><size>0.5 0.1389</size>
+      <pos>0 0</pos><size>0.55 0.1389</size>
       <color>${cgHeader}</color>
       <zIndex>3</zIndex>
     </image>
     <image name="cgHeaderRule" extra="true">
       <path>./art/white.png</path>
-      <pos>0 0.1361</pos><size>0.5 0.0028</size>
+      <pos>0 0.1361</pos><size>0.55 0.0028</size>
       <color>${cgLine}</color>
       <zIndex>4</zIndex>
     </image>
@@ -180,14 +180,14 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- "GUIDE" badge -->
     <image name="cgPill" extra="true">
       <path>./art/white.png</path>
-      <pos>0.4271 0.03</pos><size>0.0521 0.08</size>
+      <pos>0.4771 0.03</pos><size>0.0521 0.08</size>
       <color>${cgHighlight}</color>
       <roundCorners>8</roundCorners>
       <zIndex>5</zIndex>
     </image>
     <text name="cgPillText" extra="true">
       <text>GUIDE</text>
-      <pos>0.4271 0.03</pos><size>0.0521 0.08</size>
+      <pos>0.4771 0.03</pos><size>0.0521 0.08</size>
       <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -199,7 +199,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- Right media panel -->
     <image name="cgMediaBg" extra="true">
       <path>./art/white.png</path>
-      <pos>0.5 0</pos><size>0.5 0.5185</size>
+      <pos>0.55 0</pos><size>0.45 0.5185</size>
       <color>${cgMedia}</color>
       <zIndex>2</zIndex>
     </image>
@@ -286,7 +286,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
 
     <text name="cgListingsLabel" extra="true">
       <text>System Listings</text>
-      <pos>0.22 0.017</pos><size>0.2 0.055</size>
+      <pos>0.27 0.017</pos><size>0.2 0.055</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -299,7 +299,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- Info panel -->
     <text name="cgSysName" extra="true">
       <text>{system:fullName}</text>
-      <pos>0.0365 0.155</pos><size>0.26 0.06</size>
+      <pos>0.0365 0.155</pos><size>0.31 0.06</size>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
       <fontSize>0.042</fontSize>
@@ -311,7 +311,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <image name="cgSysLogo" extra="true">
       <path>./art/logos/${system.theme}.png</path>
       <path>./art/logos/${system.theme}.svg</path>
-      <pos>0.4792 0.185</pos>
+      <pos>0.5292 0.185</pos>
       <origin>1 0.5</origin>
       <maxSize>0.13 0.06</maxSize>
       <linearSmooth>true</linearSmooth>
@@ -320,7 +320,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <text name="cgSysChannel" extra="true">
       <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
       <visible>!(exists('${themePath}/art/logos/' + {system:theme} + '.svg') || exists('${themePath}/art/logos/' + {system:theme} + '.png'))</visible>
-      <pos>0.30 0.155</pos><size>0.1792 0.06</size>
+      <pos>0.35 0.155</pos><size>0.1792 0.06</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
       <forceUppercase>true</forceUppercase>
@@ -332,7 +332,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </text>
     <text name="cgSysMaker" extra="true">
       <text>{system:manufacturer}  ·  {system:releaseYear}</text>
-      <pos>0.0365 0.215</pos><size>0.44 0.05</size>
+      <pos>0.0365 0.215</pos><size>0.49 0.05</size>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
       <fontSize>0.038</fontSize>
@@ -342,7 +342,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </text>
     <text name="cgSysStats" extra="true">
       <text>{system:total} games available</text>
-      <pos>0.0365 0.27</pos><size>0.44 0.05</size>
+      <pos>0.0365 0.27</pos><size>0.49 0.05</size>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
       <fontSize>0.038</fontSize>
@@ -354,7 +354,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- System art: a generated "channel card" (no images needed) -->
     <image name="cgCardBg" extra="true">
       <path>./art/white.png</path>
-      <pos>0.5 0</pos><size>0.5 0.5185</size>
+      <pos>0.55 0</pos><size>0.45 0.5185</size>
       <color>${cgHeader}</color>
       <colorEnd>${cgPanelTop}</colorEnd>
       <gradientType>vertical</gradientType>
@@ -362,7 +362,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </image>
     <text name="cgCardCount" extra="true">
       <text>{system:total} GAMES</text>
-      <pos>0.5 0.06</pos><size>0.5 0.05</size>
+      <pos>0.55 0.06</pos><size>0.45 0.05</size>
       <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -373,7 +373,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </text>
     <text name="cgCardCode" extra="true">
       <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
-      <pos>0.5 0.12</pos><size>0.5 0.17</size>
+      <pos>0.55 0.12</pos><size>0.45 0.17</size>
       <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
       <forceUppercase>true</forceUppercase>
@@ -386,7 +386,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </text>
     <text name="cgCardName" extra="true">
       <text>{system:fullName}</text>
-      <pos>0.52 0.3</pos><size>0.46 0.07</size>
+      <pos>0.565 0.3</pos><size>0.42 0.07</size>
       <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -397,7 +397,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     </text>
     <text name="cgCardMaker" extra="true">
       <text>{system:manufacturer}  ·  {system:releaseYear}</text>
-      <pos>0.52 0.38</pos><size>0.46 0.06</size>
+      <pos>0.565 0.38</pos><size>0.42 0.06</size>
       <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -409,18 +409,18 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- System photo (from es-theme-carbon) covers the card when one exists -->
     <image name="cgSysPhoto" extra="true">
       <path>./art/background/${system.theme}.jpg</path>
-      <pos>0.75 0.2593</pos>
+      <pos>0.775 0.2593</pos>
       <origin>0.5 0.5</origin>
-      <size>0.5 0.5185</size>
+      <size>0.45 0.5185</size>
       <linearSmooth>true</linearSmooth>
       <zIndex>8</zIndex>
     </image>
     <!-- Optional user image: art/systems/<system>.jpg overrides everything -->
     <image name="cgSysArt" extra="true">
       <path>./art/systems/${system.theme}.jpg</path>
-      <pos>0.75 0.2593</pos>
+      <pos>0.775 0.2593</pos>
       <origin>0.5 0.5</origin>
-      <size>0.5 0.5185</size>
+      <size>0.45 0.5185</size>
       <linearSmooth>true</linearSmooth>
       <zIndex>9</zIndex>
     </image>
@@ -590,7 +590,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
 
     <text name="cgListingsLabel" extra="true">
       <text>Game Listings</text>
-      <pos>0.22 0.017</pos><size>0.2 0.055</size>
+      <pos>0.27 0.017</pos><size>0.2 0.055</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -602,7 +602,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
 
     <!-- Info panel: selected game -->
     <text name="md_name">
-      <pos>0.0365 0.155</pos><size>0.26 0.06</size>
+      <pos>0.0365 0.155</pos><size>0.31 0.06</size>
       <alignment>left</alignment>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -616,7 +616,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
     <!-- System code, with a lock badge to its left when the game is a favorite.
          The stack lays out right-to-left, so the code stays right-aligned. -->
     <stackpanel name="cgChannelStack" extra="true">
-      <pos>0.30 0.155</pos><size>0.1792 0.06</size>
+      <pos>0.35 0.155</pos><size>0.1792 0.06</size>
       <orientation>horizontal</orientation>
       <reverse>true</reverse>
       <separator>0.012</separator>
@@ -651,7 +651,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>40</zIndex>
     </datetime>
     <text name="md_genre">
-      <pos>0.09 0.215</pos><size>0.18 0.05</size>
+      <pos>0.09 0.215</pos><size>0.23 0.05</size>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
       <fontSize>0.038</fontSize>
@@ -660,7 +660,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>40</zIndex>
     </text>
     <text name="md_lbl_players">
-      <pos>0.275 0.215</pos><size>0.085 0.05</size>
+      <pos>0.325 0.215</pos><size>0.085 0.05</size>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
       <fontSize>0.038</fontSize>
@@ -669,7 +669,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>40</zIndex>
     </text>
     <text name="md_players">
-      <pos>0.36 0.215</pos><size>0.04 0.05</size>
+      <pos>0.41 0.215</pos><size>0.04 0.05</size>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
       <fontSize>0.038</fontSize>
@@ -678,7 +678,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>40</zIndex>
     </text>
     <rating name="md_rating">
-      <pos>0.4792 0.24</pos>
+      <pos>0.5292 0.24</pos>
       <origin>1 0.5</origin>
       <size>0.075 0.03</size>
       <horizontalAlignment>right</horizontalAlignment>
@@ -687,7 +687,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>40</zIndex>
     </rating>
     <text name="md_description">
-      <pos>0.0365 0.27</pos><size>0.445 0.238</size>
+      <pos>0.0365 0.27</pos><size>0.495 0.238</size>
       <fontPath>${cgBold}</fontPath>
       <fontSize>0.036</fontSize>
       <lineSpacing>1.15</lineSpacing>
@@ -699,13 +699,14 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>40</zIndex>
     </text>
 
-    <!-- Box art: box (thumbnail) first, then screenshot, then NO SIGNAL card -->
+    <!-- Game media (default: screenshot, then box art, then NO SIGNAL card).
+         Scaled to fit the whole window without cropping. -->
     <image name="cgBoxArt" extra="true">
-      <path>exists({game:thumbnail}) ? {game:thumbnail} : {game:image}</path>
+      <path>exists({game:image}) ? {game:image} : {game:thumbnail}</path>
       <default>./art/nosignal.png</default>
-      <pos>0.75 0.2593</pos>
+      <pos>0.775 0.2593</pos>
       <origin>0.5 0.5</origin>
-      <maxSize>0.46 0.48</maxSize>
+      <maxSize>0.45 0.5185</maxSize>
       <linearSmooth>true</linearSmooth>
       <zIndex>8</zIndex>
     </image>
@@ -891,9 +892,9 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
        Must stay after the base views: later definitions override earlier ones.
        ============================================================ -->
   <subset name="gamemedia" displayName="Game media">
+    <include name="screenshot" displayName="Screenshot">./subsets/media/screenshot.xml</include>
     <include name="boxart" displayName="Box art">./subsets/media/boxart.xml</include>
     <include name="video" displayName="Video">./subsets/media/video.xml</include>
-    <include name="screenshot" displayName="Screenshot">./subsets/media/screenshot.xml</include>
     <include name="titleshot" displayName="Title screen">./subsets/media/titleshot.xml</include>
     <include name="fanart" displayName="Fan art">./subsets/media/fanart.xml</include>
   </subset>
