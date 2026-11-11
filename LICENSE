@@ -17,10 +17,11 @@ Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
 Third-party material included in this theme:
 
-  art/background/*.jpg
-    System photos from es-theme-carbon (https://github.com/fabricecaruso/es-theme-carbon)
+  art/background/*.jpg, art/logos/*
+    System photos and logos from es-theme-carbon (https://github.com/fabricecaruso/es-theme-carbon)
     by Fabrice Caruso, based on "Carbon" by Eric Hettervik (Rookervik) and
-    "simple" by Nils Bonenberger. Licensed CC-BY-NC-SA. Resized to 960x540.
+    "simple" by Nils Bonenberger. Licensed CC-BY-NC-SA. Photos resized to 960x540; large logo SVGs
+    rasterized to PNG. Logos are trademarks of their respective owners.
 
   fonts/RobotoCondensed-Bold.ttf, fonts/RobotoCondensed-Medium.ttf
     Roboto Condensed, SIL Open Font License 1.1 (see fonts/OFL.txt).

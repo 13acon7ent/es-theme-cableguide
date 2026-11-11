@@ -5,7 +5,7 @@ Retro TV Guide – Classic 2000s Cable Menu Theme for Batocera
 A 2010-era cable TV listings look for Batocera (built for v44, 1920×1080 / 16:9).
 
 - **System view:** systems are listed as "channels" (system code | full name | manufacturer). The top-left panel shows system info and the right panel shows a photo of the system (or a generated channel card if there's no photo).
-- **Gamelist view (detailed):** games are listed as "channels" (release year / system code | title | genre). The top-left panel shows the selected game's details and the right panel shows its box art.
+- **Gamelist view (detailed):** the header shows the system's logo (or its name if there's no logo), and games are listed as "channels" (release year / system code | title | genre). The top-left panel shows the selected game's details and the right panel shows its box art.
 - **Genre colors:** a game's cells turn green when its genre is exactly `Sports` and purple when it's exactly `Platform`. Everything else is navy.
 - **Menus:** restyled to match the guide (blue window, pale-yellow selection).
 
@@ -52,5 +52,5 @@ CC BY-NC-SA 4.0: free to use, share and modify, with credit, not for commercial 
 
 ## Credits
 
-- System photos in `art/background/` come from [es-theme-carbon](https://github.com/fabricecaruso/es-theme-carbon) by Fabrice Caruso (based on "Carbon" by Eric Hettervik and "simple" by Nils Bonenberger), licensed CC-BY-NC-SA. Resized for this theme.
+- System logos in `art/logos/` (white versions where available; large SVGs converted to PNG) and system photos in `art/background/` come from [es-theme-carbon](https://github.com/fabricecaruso/es-theme-carbon) by Fabrice Caruso (based on "Carbon" by Eric Hettervik and "simple" by Nils Bonenberger), licensed CC-BY-NC-SA. Resized for this theme. System logos are trademarks of their respective owners.
 - Font: Roboto Condensed, SIL Open Font License 1.1 (`fonts/OFL.txt`).
