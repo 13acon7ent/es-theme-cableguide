@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Game media: title screen, falls back to screenshot, then NO SIGNAL -->
+<theme>
+  <formatVersion>7</formatVersion>
+  <view name="detailed">
+    <image name="cgBoxArt">
+      <path>exists({game:titleshot}) ? {game:titleshot} : {game:image}</path>
+      <default>./../../art/nosignal.png</default>
+      <visible>true</visible>
+    </image>
+  </view>
+</theme>

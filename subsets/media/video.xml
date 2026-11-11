@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Game media: video, shows box art while loading or when there's no video, then NO SIGNAL -->
+<theme>
+  <formatVersion>7</formatVersion>
+  <view name="detailed">
+    <image name="cgBoxArt">
+      <visible>false</visible>
+    </image>
+    <video name="md_video">
+      <pos>0.75 0.2593</pos>
+      <origin>0.5 0.5</origin>
+      <maxSize>0.46 0.48</maxSize>
+      <delay>1</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>true</showSnapshotDelay>
+      <snapshotSource>thumbnail</snapshotSource>
+      <defaultSnapshot>./../../art/nosignal.png</defaultSnapshot>
+      <linearSmooth>true</linearSmooth>
+      <zIndex>8</zIndex>
+    </video>
+  </view>
+</theme>

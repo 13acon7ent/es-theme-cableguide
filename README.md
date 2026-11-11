@@ -22,11 +22,21 @@ A 2010-era cable TV listings look for Batocera (built for v44, 1920×1080 / 16:9
 1. Copy the `es-theme-cableguide` folder to `/userdata/themes/` (over the network share it's `\\BATOCERA\share\themes\`).
 2. Main Menu → User Interface Settings → Theme Set → **es-theme-cableguide**.
 3. For the header clock: User Interface Settings → **Show clock** → on.
-4. Leave Gamelist View Style on **automatic** or **detailed**.
+4. Leave Gamelist View Style (under Theme Configuration) on **automatic** or **detailed**.
 
-## Box art
+## Game media
 
-The right panel shows the game's **Box** image (`thumbnail` in gamelist.xml). If a game has no box art it falls back to the screenshot (`image`), and if it has neither it shows a "NO SIGNAL" card.
+Pick what the right panel shows in User Interface Settings → Theme Configuration → **Game media**:
+
+| Option | Shows | Falls back to |
+|---|---|---|
+| Box art (default) | Box (`thumbnail`) | Screenshot, then NO SIGNAL |
+| Video | Video (`video`) | Box art, then NO SIGNAL |
+| Screenshot | Screenshot (`image`) | Box art, then NO SIGNAL |
+| Title screen | Title screen (`titleshot`) | Screenshot, then NO SIGNAL |
+| Fan art | Fan art (`fanart`) | Screenshot, then NO SIGNAL |
+
+Each option only shows media your scraper actually downloaded.
 
 ## Custom system images (optional)
 

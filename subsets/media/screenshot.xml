@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Game media: screenshot, falls back to box art, then NO SIGNAL -->
+<theme>
+  <formatVersion>7</formatVersion>
+  <view name="detailed">
+    <image name="cgBoxArt">
+      <path>exists({game:image}) ? {game:image} : {game:thumbnail}</path>
+      <default>./../../art/nosignal.png</default>
+      <visible>true</visible>
+    </image>
+  </view>
+</theme>

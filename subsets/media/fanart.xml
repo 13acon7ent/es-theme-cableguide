@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Game media: fan art, falls back to screenshot, then NO SIGNAL -->
+<theme>
+  <formatVersion>7</formatVersion>
+  <view name="detailed">
+    <image name="cgBoxArt">
+      <path>exists({game:fanart}) ? {game:fanart} : {game:image}</path>
+      <default>./../../art/nosignal.png</default>
+      <visible>true</visible>
+    </image>
+  </view>
+</theme>

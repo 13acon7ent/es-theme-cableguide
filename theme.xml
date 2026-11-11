@@ -802,4 +802,17 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       </itemTemplate>
     </textlist>
   </view>
+
+  <!-- ============================================================
+       THEME OPTIONS (User Interface Settings > Theme Configuration)
+       The first option in each subset is the default.
+       Must stay after the base views: later definitions override earlier ones.
+       ============================================================ -->
+  <subset name="gamemedia" displayName="Game media">
+    <include name="boxart" displayName="Box art">./subsets/media/boxart.xml</include>
+    <include name="video" displayName="Video">./subsets/media/video.xml</include>
+    <include name="screenshot" displayName="Screenshot">./subsets/media/screenshot.xml</include>
+    <include name="titleshot" displayName="Title screen">./subsets/media/titleshot.xml</include>
+    <include name="fanart" displayName="Fan art">./subsets/media/fanart.xml</include>
+  </subset>
 </theme>
