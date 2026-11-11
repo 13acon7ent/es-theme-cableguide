@@ -272,6 +272,9 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
   <!-- ============================================================
        SYSTEM VIEW
        ============================================================ -->
+  <!-- System code text (channel cells, info panel, channel card) uses
+       {system:theme}, except Batocera's "custom-collections" entry, shown as "custom".
+       The expression is inlined: theme variables containing "=" are evaluated at load time. -->
   <view name="system">
     <image name="logo"><visible>false</visible></image>
     <text name="logoText"><visible>false</visible></text>
@@ -302,7 +305,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>10</zIndex>
     </text>
     <text name="cgSysChannel" extra="true">
-      <text>${system.theme}</text>
+      <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
       <pos>0.30 0.155</pos><size>0.1792 0.06</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
@@ -355,7 +358,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>7</zIndex>
     </text>
     <text name="cgCardCode" extra="true">
-      <text>{system:theme}</text>
+      <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
       <pos>0.5 0.12</pos><size>0.5 0.17</size>
       <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
@@ -462,7 +465,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
             <color>${cgChannel}</color>
           </image>
           <text name="chanText">
-            <text>{system:theme}</text>
+            <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
             <pos>0 0</pos><size>0.1333 0.95</size>
             <alignment>center</alignment>
             <verticalAlignment>center</verticalAlignment>
@@ -597,7 +600,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>40</zIndex>
     </text>
     <text name="cgChannel" extra="true">
-      <text>${system.theme}</text>
+      <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
       <pos>0.30 0.155</pos><size>0.1792 0.06</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
@@ -680,7 +683,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
 
     <!-- Column header -->
     <text name="cgBarLeft" extra="true">
-      <text>Year / Sys</text>
+      <text>Year</text>
       <pos>0.0146 0.5185</pos><size>0.12 0.0621</size>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -690,7 +693,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
       <zIndex>10</zIndex>
     </text>
     <text name="cgBarMid" extra="true">
-      <text>{system:fullName}  ·  {system:total} titles</text>
+      <text>{system:fullName}</text>
       <pos>0.1458 0.5185</pos><size>0.6 0.0621</size>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>${cgBold}</fontPath>
@@ -746,7 +749,7 @@ Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
             <color>${cgDarkText}</color>
           </text>
           <text name="chanBottom">
-            <text>{system:theme}</text>
+            <text>{system:theme} == 'custom-collections' ? 'custom' : {system:theme}</text>
             <pos>0 0.46</pos><size>0.1333 0.44</size>
             <alignment>center</alignment>
             <verticalAlignment>center</verticalAlignment>
