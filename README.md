@@ -25,6 +25,13 @@ A 2010-era cable TV listings look for Batocera (built for v44, 1920×1080 / 16:9
 3. For the header clock: User Interface Settings → **Show clock** → on.
 4. Leave Gamelist View Style (under Theme Configuration) on **automatic** or **detailed**.
 
+## Transitions
+
+The button legend, clock and controller icons are drawn by Batocera on a fixed layer above the theme, so they don't move with the screen during transitions. To keep things clean:
+
+- **Switching between systems and game lists:** the theme defaults to **instant** (used when User Interface Settings → **List Transition** is on *auto*).
+- **Launching a game:** themes can't set this one. For the cleanest look, set User Interface Settings → **Game Launch Transition** to **instant**.
+
 ## Preview style
 
 Choose what the preview window shows:

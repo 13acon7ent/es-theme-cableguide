@@ -14,7 +14,11 @@ Credits:
 
 Layout is designed at 1920x1080 (16:9). All coordinates are normalized (0-1).
 -->
-<theme defaultView="detailed">
+<!-- defaultTransition="instant": the button legend, clock and controller icons are drawn by
+     Batocera on a fixed layer above the views, so slide/fade transitions move the views out
+     from under them. Instant switching avoids that. Applies only when the user's
+     List Transition setting is "auto". -->
+<theme defaultView="detailed" defaultTransition="instant">
   <formatVersion>7</formatVersion>
 
   <variables>
